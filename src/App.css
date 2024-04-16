@@ -1,5 +1,4 @@
 #root {
-  max-width: 1440px;
   margin: auto;
   padding: 2rem;
   text-align: center;
@@ -11,4 +10,7 @@
 
 .read-the-docs {
   color: #888;
+}
+.clip-bottom {
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }

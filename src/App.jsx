@@ -31,10 +31,12 @@ const App = () => {
     },
   ]);
   return (
-    <div className="relative max-w-screen-wide mx-auto bg-slate-50 dark:bg-gray-800">
-      <Provider store={store}>
-        <RouterProvider router={router} />
-      </Provider>
+    <div className="relative flex justify-center mx-auto bg-slate-50 dark:bg-gray-900 text-slate-800 dark:text-gray-50">
+      <div className="container">
+        <Provider store={store}>
+          <RouterProvider router={router} />
+        </Provider>
+      </div>
     </div>
   );
 };

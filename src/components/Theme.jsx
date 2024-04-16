@@ -12,14 +12,11 @@ function Theme() {
   useEffect(() => {
     document.documentElement.classList.remove("dark", "light");
     document.documentElement.classList.add(theme);
-    document.documentElement.classList.add(
-      theme == "light" ? "bg-slate-50" : "bg-gray-800",
-      theme == "light" ? "text-slate-800" : "text-slate-50"
-    );
     setItem(THEME_VARIABLE, theme);
   }, [theme]);
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+    if (theme == "dark") setTheme("light");
+    else setTheme("dark");
   };
   return (
     <button
