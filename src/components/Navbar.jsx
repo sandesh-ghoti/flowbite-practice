@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Theme from "./Theme";
+import Accordion from "./Accordion";
+import PopOver from "./PopOver";
+import Caraousal from "./Caraousal";
+import Skeleton from "./Skeleton";
 
 const TabsComponent = () => {
   const [activeTab, setActiveTab] = useState("about");
@@ -391,6 +395,26 @@ const Navbar = () => {
         </div>
       </nav>
       <TabsComponent />
+      <Accordion />
+      <PopOver />
+      <div className="my-8 flex flex-wrap justify-center gap-4">
+        <Caraousal />
+      </div>
+      <div className="my-4 flex flex-wrap justify-center gap-4">
+        <div className="w-52">
+          <Skeleton type="card" />
+        </div>
+        <Skeleton type="card" />
+        <Skeleton type="card" />
+        <Skeleton type="card" />
+        <Skeleton type="card" />
+        <Skeleton type="card" />
+        <Skeleton type="card" />
+        <Skeleton type="card" />
+      </div>
+      <div className="mt-4 flex flex-wrap justify-center gap-4">
+        <Skeleton type="video" />
+      </div>
     </>
   );
 };
